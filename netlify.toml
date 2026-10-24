@@ -1,0 +1,3 @@
+[build]
+  publish = "funnel"
+  ignore = "git diff --quiet HEAD^ HEAD -- funnel"
