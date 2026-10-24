@@ -3,97 +3,196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A VPN guide for crypto users in restricted regions</title>
-  <meta name="description" content="Practical VPN considerations for crypto users, including what a VPN can and cannot do.">
+  <title>The VPN I actually use</title>
+  <meta name="description" content="An honest VPN guide for unblocking, privacy, and travel.">
   <style>
     :root {
-      color-scheme: light dark;
+      color-scheme: light;
+      --fg: #111;
+      --muted: #666;
+      --line: #e5e5e5;
+      --accent: #111;
       font: 17px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #202124;
+      color: var(--fg);
       background: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --fg: #eee;
+        --muted: #999;
+        --line: #333;
+        --accent: #fff;
+        background: #0e0e0e;
+      }
     }
     * { box-sizing: border-box; }
     body {
       max-width: 680px;
       margin: 0 auto;
       padding: 40px 20px 56px;
+      color: var(--fg);
     }
-    h1 { font-size: clamp(2rem, 8vw, 2.7rem); line-height: 1.15; }
+    h1 { font-size: clamp(2rem, 8vw, 2.7rem); line-height: 1.2; }
     h2 { margin: 34px 0 10px; font-size: 1.25rem; }
-    p, li { color: #41454a; }
+    p, li { color: var(--fg); }
     li { margin: 8px 0; padding-left: 4px; }
-    .notice {
-      margin: 26px 0;
-      padding: 16px 18px;
-      border: 1px solid #c9d2dc;
-      border-radius: 8px;
-      background: #f5f8fb;
+    .muted, footer { color: var(--muted); font-size: 0.9rem; }
+    .opts { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .opts button, form button {
+      font: inherit;
+      cursor: pointer;
     }
-    .notice p:last-child { margin-bottom: 0; }
-    footer { margin-top: 44px; border-top: 1px solid #d7dce1; padding-top: 16px; }
-    footer, .muted { color: #5b6168; font-size: 0.9rem; }
+    .opts button {
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--fg);
+      background: transparent;
+    }
+    .opts button[aria-pressed="true"] {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
     @media (prefers-color-scheme: dark) {
-      :root { color: #f1f3f4; background: #111315; }
-      p, li { color: #d2d6da; }
-      .notice { border-color: #3d4854; background: #1b2229; }
-      footer { border-color: #3d4248; }
-      footer, .muted { color: #aeb5bc; }
+      .opts button[aria-pressed="true"] { color: #111; }
     }
+    .variant[hidden] { display: none; }
+    form { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+    input[type="email"] {
+      flex: 1 1 220px;
+      min-width: 0;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--fg);
+      background: transparent;
+      font: inherit;
+    }
+    form button, .cta {
+      padding: 11px 18px;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--accent);
+      font: inherit;
+    }
+    @media (prefers-color-scheme: dark) {
+      form button, .cta { color: #111; }
+    }
+    .cta { display: inline-block; margin-top: 12px; text-decoration: none; }
+    .status { margin-top: 26px; color: var(--muted); font-size: 0.85rem; }
+    footer { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 16px; }
   </style>
 </head>
 <body>
   <main>
-    <h1>A VPN guide for crypto users in restricted regions</h1>
-    <p>
-      If you use crypto services, understand the rules and security trade-offs
-      before connecting through a VPN. A VPN is a network tool, not a way around
-      an exchange's eligibility requirements or local law.
-    </p>
+    <h1>The VPN I actually use</h1>
 
-    <section aria-labelledby="limits">
-      <h2 id="limits">What a VPN can and cannot do</h2>
-      <ul>
-        <li>
-          A VPN routes your connection through a VPN server and can encrypt
-          traffic between your device and that server.
-        </li>
-        <li>
-          It does not change your identity, remove KYC requirements, or guarantee
-          access to a website or exchange.
-        </li>
-        <li>
-          A service may restrict VPN use in its terms. Check those terms and the
-          laws that apply where you are before using one.
-        </li>
-      </ul>
+    <p>I'm [YOUR NAME]. I work in networking — day job is [WHAT YOU DO].</p>
+    <p>I've used PureVPN for [N] months, mostly for [real reason]. Here's my honest read, including the parts they'd rather I skipped.</p>
+
+    <section aria-labelledby="routing-question">
+      <h2 id="routing-question">First — what do you need it for?</h2>
+      <div class="opts" role="group" aria-labelledby="routing-question">
+        <button type="button" data-variant="unblocking" aria-pressed="true">Unblocking</button>
+        <button type="button" data-variant="privacy" aria-pressed="false">Privacy</button>
+        <button type="button" data-variant="travel" aria-pressed="false">Public wifi</button>
+        <button type="button" data-variant="all" aria-pressed="false">All of it</button>
+      </div>
+
+      <section class="variant" id="unblocking" aria-label="Unblocking">
+        <p>So you want to reach things that are blocked where you are. Same as me.</p>
+        <ul>
+          <li>Works on sites that block by country. I tested it on [ones you tested].</li>
+          <li>Fast enough for HD. Most cheap ones aren't.</li>
+          <li>Stays up. Free ones die constantly and you start over.</li>
+        </ul>
+      </section>
+
+      <section class="variant" id="privacy" aria-label="Privacy" hidden>
+        <p>So you don't want your ISP watching. Fair.</p>
+        <ul>
+          <li>Hides your traffic from your provider entirely.</li>
+          <li>No-logs, externally audited — most haven't been.</li>
+          <li>Covers your phone too, so it's not just the laptop exposed.</li>
+        </ul>
+      </section>
+
+      <section class="variant" id="travel" aria-label="Public wifi" hidden>
+        <p>So you're on hotel and cafe wifi. That's where you actually need this.</p>
+        <ul>
+          <li>Encrypts everything on a shared network.</li>
+          <li>One account, several devices.</li>
+          <li>30-day refund, so it's not a gamble.</li>
+        </ul>
+      </section>
+
+      <section class="variant" id="all" aria-label="All of it" hidden>
+        <p>So you want to reach things that are blocked where you are. Same as me.</p>
+        <ul>
+          <li>Works on sites that block by country. I tested it on [ones you tested].</li>
+          <li>Fast enough for HD. Most cheap ones aren't.</li>
+          <li>Stays up. Free ones die constantly and you start over.</li>
+        </ul>
+        <p>So you don't want your ISP watching. Fair.</p>
+        <ul>
+          <li>Hides your traffic from your provider entirely.</li>
+          <li>No-logs, externally audited — most haven't been.</li>
+          <li>Covers your phone too, so it's not just the laptop exposed.</li>
+        </ul>
+        <p>So you're on hotel and cafe wifi. That's where you actually need this.</p>
+        <ul>
+          <li>Encrypts everything on a shared network.</li>
+          <li>One account, several devices.</li>
+          <li>30-day refund, so it's not a gamble.</li>
+        </ul>
+      </section>
     </section>
 
-    <section aria-labelledby="checklist">
-      <h2 id="checklist">A few checks before choosing a provider</h2>
-      <ul>
-        <li>Read the provider's privacy policy and understand what connection data it retains.</li>
-        <li>Look for clear ownership, supported security protocols, and independently verifiable claims.</li>
-        <li>Use strong, unique passwords and multi-factor authentication on your accounts.</li>
-        <li>Never share a wallet seed phrase, password, or recovery code with a VPN provider.</li>
-      </ul>
+    <section aria-labelledby="setup-guide">
+      <h2 id="setup-guide">Want the setup guide?</h2>
+      <p>Drop your email and I'll send the setup guide — the two settings that matter, and the ones to ignore. <strong>Two emails. That's it.</strong></p>
+      <form action="MAILERLITE_ACTION_HERE" method="post">
+        <label class="muted" for="email">Email address</label>
+        <input id="email" type="email" name="fields[email]" autocomplete="email" required>
+        <button type="submit">Send me the setup guide</button>
+      </form>
     </section>
 
-    <aside class="notice" aria-label="Pre-launch status">
-      <p><strong>Product review and email guide are not available yet.</strong></p>
-      <p>
-        No VPN product has been tested or endorsed on this page. Email signup is
-        not configured, so this page does not collect email addresses. No
-        affiliate link is active; any future affiliate link will be clearly
-        identified.
-      </p>
-    </aside>
+    <section aria-labelledby="handoff">
+      <h2 id="handoff">Sending you to PureVPN now. Three things:</h2>
+      <ol>
+        <li>Take the [plan] — monthly is worse value.</li>
+        <li>After install, turn on the kill switch. Almost everyone misses it.</li>
+        <li>30-day refund. If it's slow, take your money back.</li>
+      </ol>
+      <a class="cta" href="AFFILIATE_LINK_HERE">PureVPN</a>
+    </section>
+
+    <p class="status">Email signup and affiliate link are not live until the placeholders are configured.</p>
   </main>
 
   <footer>
-    <p class="muted">
-      General information only, not legal, financial, or security advice.
-      Always follow applicable laws and the terms of services you use.
-    </p>
+    <p>Stuck? Message me at @[YOUR HANDLE]</p>
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll("[data-variant]");
+    const variants = document.querySelectorAll(".variant");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const selected = button.dataset.variant;
+        buttons.forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        variants.forEach((variant) => {
+          variant.hidden = variant.id !== selected;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
