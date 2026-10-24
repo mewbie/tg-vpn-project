@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The VPN I actually use</title>
-  <meta name="description" content="An honest VPN guide for unblocking, privacy, and travel.">
+  <meta name="description" content="A practical VPN guide for unblocking, privacy, and travel, with product details pending verification.">
   <style>
     :root {
       color-scheme: light;
@@ -83,6 +83,7 @@
     }
     .cta { display: inline-block; margin-top: 12px; text-decoration: none; }
     .status { margin-top: 26px; color: var(--muted); font-size: 0.85rem; }
+    .cta[aria-disabled="true"] { opacity: 0.7; cursor: not-allowed; }
     footer { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 16px; }
   </style>
 </head>
@@ -90,8 +91,8 @@
   <main>
     <h1>The VPN I actually use</h1>
 
-    <p>I'm [YOUR NAME]. I work in networking — day job is [WHAT YOU DO].</p>
-    <p>I've used PureVPN for [N] months, mostly for [real reason]. Here's my honest read, including the parts they'd rather I skipped.</p>
+    <p>I'm a solo builder. I work in networking — day job is internet infrastructure.</p>
+    <p>I haven't used PureVPN, so this isn't a personal review. Check the provider's current features, privacy terms, and refund policy before choosing a plan.</p>
 
     <section aria-labelledby="routing-question">
       <h2 id="routing-question">First — what do you need it for?</h2>
@@ -105,77 +106,75 @@
       <section class="variant" id="unblocking" aria-label="Unblocking">
         <p>So you want to reach things that are blocked where you are. Same as me.</p>
         <ul>
-          <li>Works on sites that block by country. I tested it on [ones you tested].</li>
-          <li>Fast enough for HD. Most cheap ones aren't.</li>
-          <li>Stays up. Free ones die constantly and you start over.</li>
+          <li>Whether a site works can depend on your location, the VPN server, and that site's rules.</li>
+          <li>I haven't tested access, speed, or reliability with PureVPN.</li>
         </ul>
       </section>
 
       <section class="variant" id="privacy" aria-label="Privacy" hidden>
         <p>So you don't want your ISP watching. Fair.</p>
         <ul>
-          <li>Hides your traffic from your provider entirely.</li>
-          <li>No-logs, externally audited — most haven't been.</li>
-          <li>Covers your phone too, so it's not just the laptop exposed.</li>
+          <li>A VPN changes how your internet traffic is routed; it does not make you anonymous.</li>
+          <li>Read the provider's privacy policy and look for independent evidence for any no-logs claims.</li>
+          <li>Check which devices and apps the service supports.</li>
         </ul>
       </section>
 
       <section class="variant" id="travel" aria-label="Public wifi" hidden>
         <p>So you're on hotel and cafe wifi. That's where you actually need this.</p>
         <ul>
-          <li>Encrypts everything on a shared network.</li>
-          <li>One account, several devices.</li>
-          <li>30-day refund, so it's not a gamble.</li>
+          <li>Check the provider's documentation for how its VPN connection is protected.</li>
+          <li>Confirm the device limit for the plan you are considering.</li>
+          <li>Check the current refund terms before you buy.</li>
         </ul>
       </section>
 
       <section class="variant" id="all" aria-label="All of it" hidden>
         <p>So you want to reach things that are blocked where you are. Same as me.</p>
         <ul>
-          <li>Works on sites that block by country. I tested it on [ones you tested].</li>
-          <li>Fast enough for HD. Most cheap ones aren't.</li>
-          <li>Stays up. Free ones die constantly and you start over.</li>
+          <li>Whether a site works can depend on your location, the VPN server, and that site's rules.</li>
+          <li>I haven't tested access, speed, or reliability with PureVPN.</li>
         </ul>
         <p>So you don't want your ISP watching. Fair.</p>
         <ul>
-          <li>Hides your traffic from your provider entirely.</li>
-          <li>No-logs, externally audited — most haven't been.</li>
-          <li>Covers your phone too, so it's not just the laptop exposed.</li>
+          <li>A VPN changes how your internet traffic is routed; it does not make you anonymous.</li>
+          <li>Read the provider's privacy policy and look for independent evidence for any no-logs claims.</li>
+          <li>Check which devices and apps the service supports.</li>
         </ul>
         <p>So you're on hotel and cafe wifi. That's where you actually need this.</p>
         <ul>
-          <li>Encrypts everything on a shared network.</li>
-          <li>One account, several devices.</li>
-          <li>30-day refund, so it's not a gamble.</li>
+          <li>Check the provider's documentation for how its VPN connection is protected.</li>
+          <li>Confirm the device limit for the plan you are considering.</li>
+          <li>Check the current refund terms before you buy.</li>
         </ul>
       </section>
     </section>
 
     <section aria-labelledby="setup-guide">
       <h2 id="setup-guide">Want the setup guide?</h2>
-      <p>Drop your email and I'll send the setup guide — the two settings that matter, and the ones to ignore. <strong>Two emails. That's it.</strong></p>
+      <p>Email signup isn't configured yet, so this form is not accepting addresses.</p>
       <form action="MAILERLITE_ACTION_HERE" method="post">
         <label class="muted" for="email">Email address</label>
-        <input id="email" type="email" name="fields[email]" autocomplete="email" required>
-        <button type="submit">Send me the setup guide</button>
+        <input id="email" type="email" name="fields[email]" autocomplete="email" required disabled>
+        <button type="submit" disabled>Signup not configured</button>
       </form>
     </section>
 
     <section aria-labelledby="handoff">
-      <h2 id="handoff">Sending you to PureVPN now. Three things:</h2>
+      <h2 id="handoff">Before choosing a VPN, check these three things:</h2>
       <ol>
-        <li>Take the [plan] — monthly is worse value.</li>
-        <li>After install, turn on the kill switch. Almost everyone misses it.</li>
-        <li>30-day refund. If it's slow, take your money back.</li>
+        <li>Compare the current plan prices and renewal terms.</li>
+        <li>After install, check whether a kill switch is available and enabled.</li>
+        <li>Read the current refund policy before you buy.</li>
       </ol>
-      <a class="cta" href="AFFILIATE_LINK_HERE">PureVPN</a>
+      <a class="cta" href="#affiliate-pending" aria-disabled="true">Affiliate offer pending approval</a>
     </section>
 
-    <p class="status">Email signup and affiliate link are not live until the placeholders are configured.</p>
+    <p class="status" id="affiliate-pending">No affiliate link is active. Any future paid link will be identified as an affiliate link.</p>
   </main>
 
   <footer>
-    <p>Stuck? Message me at @[YOUR HANDLE]</p>
+    <p>Stuck? Contact handle not configured yet.</p>
   </footer>
 
   <script>
