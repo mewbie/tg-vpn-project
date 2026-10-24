@@ -1,0 +1,508 @@
+{
+  "data": [
+    {
+      "code": "RU",
+      "intentCount": 195688,
+      "confidentCount": 195578
+    },
+    {
+      "code": "IN",
+      "intentCount": 56897,
+      "confidentCount": 56717
+    },
+    {
+      "code": "IR",
+      "intentCount": 51565,
+      "confidentCount": 51553
+    },
+    {
+      "code": "MM",
+      "intentCount": 27036,
+      "confidentCount": 27031
+    },
+    {
+      "code": "ID",
+      "intentCount": 21069,
+      "confidentCount": 21050
+    },
+    {
+      "code": "TR",
+      "intentCount": 15005,
+      "confidentCount": 14866
+    },
+    {
+      "code": "CN",
+      "intentCount": 13711,
+      "confidentCount": 13701
+    },
+    {
+      "code": "BD",
+      "intentCount": 12274,
+      "confidentCount": 11990
+    },
+    {
+      "code": "UZ",
+      "intentCount": 12594,
+      "confidentCount": 11248
+    },
+    {
+      "code": "DE",
+      "intentCount": 10455,
+      "confidentCount": 10447
+    },
+    {
+      "code": "VN",
+      "intentCount": 6776,
+      "confidentCount": 6760
+    },
+    {
+      "code": "TH",
+      "intentCount": 6137,
+      "confidentCount": 6118
+    },
+    {
+      "code": "UA",
+      "intentCount": 5932,
+      "confidentCount": 5919
+    },
+    {
+      "code": "IT",
+      "intentCount": 4688,
+      "confidentCount": 4682
+    },
+    {
+      "code": "KH",
+      "intentCount": 4346,
+      "confidentCount": 4339
+    },
+    {
+      "code": "BR",
+      "intentCount": 8993,
+      "confidentCount": 4128
+    },
+    {
+      "code": "FR",
+      "intentCount": 9136,
+      "confidentCount": 3714
+    },
+    {
+      "code": "KR",
+      "intentCount": 3500,
+      "confidentCount": 3489
+    },
+    {
+      "code": "ES",
+      "intentCount": 10573,
+      "confidentCount": 2548
+    },
+    {
+      "code": "PL",
+      "intentCount": 2300,
+      "confidentCount": 2289
+    },
+    {
+      "code": "NL",
+      "intentCount": 2197,
+      "confidentCount": 2186
+    },
+    {
+      "code": "KZ",
+      "intentCount": 2085,
+      "confidentCount": 2064
+    },
+    {
+      "code": "RO",
+      "intentCount": 1923,
+      "confidentCount": 1913
+    },
+    {
+      "code": "AE",
+      "intentCount": 46481,
+      "confidentCount": 1456
+    },
+    {
+      "code": "US",
+      "intentCount": 1146,
+      "confidentCount": 1127
+    },
+    {
+      "code": "BY",
+      "intentCount": 1106,
+      "confidentCount": 1100
+    },
+    {
+      "code": "AZ",
+      "intentCount": 941,
+      "confidentCount": 934
+    },
+    {
+      "code": "GB",
+      "intentCount": 861,
+      "confidentCount": 852
+    },
+    {
+      "code": "IL",
+      "intentCount": 698,
+      "confidentCount": 690
+    },
+    {
+      "code": "AU",
+      "intentCount": 686,
+      "confidentCount": 681
+    },
+    {
+      "code": "GE",
+      "intentCount": 586,
+      "confidentCount": 586
+    },
+    {
+      "code": "MY",
+      "intentCount": 572,
+      "confidentCount": 529
+    },
+    {
+      "code": "AM",
+      "intentCount": 454,
+      "confidentCount": 448
+    },
+    {
+      "code": "CH",
+      "intentCount": 403,
+      "confidentCount": 394
+    },
+    {
+      "code": "MA",
+      "intentCount": 316,
+      "confidentCount": 301
+    },
+    {
+      "code": "MD",
+      "intentCount": 267,
+      "confidentCount": 262
+    },
+    {
+      "code": "SA",
+      "intentCount": 259,
+      "confidentCount": 246
+    },
+    {
+      "code": "JP",
+      "intentCount": 210,
+      "confidentCount": 201
+    },
+    {
+      "code": "KG",
+      "intentCount": 198,
+      "confidentCount": 187
+    },
+    {
+      "code": "PK",
+      "intentCount": 169,
+      "confidentCount": 162
+    },
+    {
+      "code": "TW",
+      "intentCount": 167,
+      "confidentCount": 161
+    },
+    {
+      "code": "MX",
+      "intentCount": 181,
+      "confidentCount": 154
+    },
+    {
+      "code": "DZ",
+      "intentCount": 145,
+      "confidentCount": 135
+    },
+    {
+      "code": "CZ",
+      "intentCount": 147,
+      "confidentCount": 130
+    },
+    {
+      "code": "BE",
+      "intentCount": 132,
+      "confidentCount": 125
+    },
+    {
+      "code": "PT",
+      "intentCount": 127,
+      "confidentCount": 120
+    },
+    {
+      "code": "NG",
+      "intentCount": 124,
+      "confidentCount": 120
+    },
+    {
+      "code": "AR",
+      "intentCount": 147,
+      "confidentCount": 112
+    },
+    {
+      "code": "ET",
+      "intentCount": 129,
+      "confidentCount": 110
+    },
+    {
+      "code": "EG",
+      "intentCount": 122,
+      "confidentCount": 110
+    },
+    {
+      "code": "LV",
+      "intentCount": 101,
+      "confidentCount": 101
+    },
+    {
+      "code": "DK",
+      "intentCount": 104,
+      "confidentCount": 95
+    },
+    {
+      "code": "TJ",
+      "intentCount": 92,
+      "confidentCount": 77
+    },
+    {
+      "code": "PH",
+      "intentCount": 91,
+      "confidentCount": 76
+    },
+    {
+      "code": "LU",
+      "intentCount": 72,
+      "confidentCount": 63
+    },
+    {
+      "code": "GH",
+      "intentCount": 56,
+      "confidentCount": 52
+    },
+    {
+      "code": "AT",
+      "intentCount": 53,
+      "confidentCount": 48
+    },
+    {
+      "code": "KE",
+      "intentCount": 48,
+      "confidentCount": 44
+    },
+    {
+      "code": "HU",
+      "intentCount": 40,
+      "confidentCount": 40
+    },
+    {
+      "code": "NP",
+      "intentCount": 43,
+      "confidentCount": 36
+    },
+    {
+      "code": "GR",
+      "intentCount": 42,
+      "confidentCount": 31
+    },
+    {
+      "code": "CU",
+      "intentCount": 36,
+      "confidentCount": 30
+    },
+    {
+      "code": "BF",
+      "intentCount": 31,
+      "confidentCount": 28
+    },
+    {
+      "code": "PY",
+      "intentCount": 40,
+      "confidentCount": 27
+    },
+    {
+      "code": "SK",
+      "intentCount": 33,
+      "confidentCount": 27
+    },
+    {
+      "code": "CL",
+      "intentCount": 41,
+      "confidentCount": 26
+    },
+    {
+      "code": "SE",
+      "intentCount": 33,
+      "confidentCount": 25
+    },
+    {
+      "code": "MT",
+      "intentCount": 32,
+      "confidentCount": 24
+    },
+    {
+      "code": "ZA",
+      "intentCount": 33,
+      "confidentCount": 21
+    },
+    {
+      "code": "TM",
+      "intentCount": 27,
+      "confidentCount": 17
+    },
+    {
+      "code": "EE",
+      "intentCount": 27,
+      "confidentCount": 15
+    },
+    {
+      "code": "PE",
+      "intentCount": 25,
+      "confidentCount": 15
+    },
+    {
+      "code": "RS",
+      "intentCount": 22,
+      "confidentCount": 13
+    },
+    {
+      "code": "LK",
+      "intentCount": 16,
+      "confidentCount": 12
+    },
+    {
+      "code": "SO",
+      "intentCount": 16,
+      "confidentCount": 12
+    },
+    {
+      "code": "HK",
+      "intentCount": 12,
+      "confidentCount": 12
+    },
+    {
+      "code": "FI",
+      "intentCount": 19,
+      "confidentCount": 11
+    },
+    {
+      "code": "HR",
+      "intentCount": 15,
+      "confidentCount": 11
+    },
+    {
+      "code": "VE",
+      "intentCount": 21,
+      "confidentCount": 10
+    },
+    {
+      "code": "NO",
+      "intentCount": 15,
+      "confidentCount": 10
+    },
+    {
+      "code": "CR",
+      "intentCount": 14,
+      "confidentCount": 10
+    },
+    {
+      "code": "MG",
+      "intentCount": 24,
+      "confidentCount": 9
+    },
+    {
+      "code": "LT",
+      "intentCount": 9,
+      "confidentCount": 9
+    },
+    {
+      "code": "MN",
+      "intentCount": 9,
+      "confidentCount": 8
+    },
+    {
+      "code": "CO",
+      "intentCount": 16,
+      "confidentCount": 7
+    },
+    {
+      "code": "EC",
+      "intentCount": 17,
+      "confidentCount": 6
+    },
+    {
+      "code": "SD",
+      "intentCount": 16,
+      "confidentCount": 6
+    },
+    {
+      "code": "YE",
+      "intentCount": 15,
+      "confidentCount": 5
+    },
+    {
+      "code": "PG",
+      "intentCount": 14,
+      "confidentCount": 5
+    },
+    {
+      "code": "ME",
+      "intentCount": 5,
+      "confidentCount": 5
+    },
+    {
+      "code": "RW",
+      "intentCount": 11,
+      "confidentCount": 3
+    },
+    {
+      "code": "IE",
+      "intentCount": 10,
+      "confidentCount": 3
+    },
+    {
+      "code": "KW",
+      "intentCount": 7,
+      "confidentCount": 3
+    },
+    {
+      "code": "UG",
+      "intentCount": 6,
+      "confidentCount": 3
+    },
+    {
+      "code": "NI",
+      "intentCount": 13,
+      "confidentCount": 2
+    },
+    {
+      "code": "PA",
+      "intentCount": 8,
+      "confidentCount": 2
+    },
+    {
+      "code": "PR",
+      "intentCount": 6,
+      "confidentCount": 2
+    },
+    {
+      "code": "BO",
+      "intentCount": 4,
+      "confidentCount": 1
+    }
+  ],
+  "meta": {
+    "total": 98,
+    "plan": "ANON",
+    "metric": "advertiser-intent",
+    "fields": {
+      "confidentCount": "creatives whose target country is confirmed by the creative itself (landing ccTLD, script, flag, unambiguous language)",
+      "intentCount": "raw AdCreative.geo group-by, including creatives whose only country signal was the region we requested from the account pool (not a targeting signal)"
+    },
+    "retired": {
+      "field": "count",
+      "was": "audience-delivery: impression tagged with region X in a channel whose language matches X",
+      "reason": "SponsoredImpression.region is no longer written \u2014 per-region requests ended 2026-06-03. The column never recorded where an ad was seen: it stored the region we requested from the account pool, and the pool silently substitutes an account from another country when it has none in the one requested."
+    }
+  }
+}

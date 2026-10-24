@@ -1,0 +1,43 @@
+name: daily-snapshot
+
+# WHEN to run
+on:
+  schedule:
+    - cron: '17 6 * * *'   # 06:17 UTC daily (off the hour to avoid the rush)
+  workflow_dispatch:        # also allow a manual click from the Actions tab
+
+# WHAT the robot is allowed to do
+permissions:
+  contents: write           # required, or the push is rejected
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest  # a fresh throwaway Linux box, free
+
+    steps:
+      # 1. download your repo onto the box
+      - uses: actions/checkout@v4
+
+      # 2. install Python
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 3. run the script, passing the secret in as an env var
+      - name: Fetch snapshots
+        env:
+          TGADSSPY_KEY: ${{ secrets.TGADSSPY_KEY }}
+        run: python scripts/fetch.py
+
+      # 4. save the result back to the repo
+      - name: Commit
+        run: |
+          git config user.name  "snapshot-bot"
+          git config user.email "snapshot-bot@users.noreply.github.com"
+          git add data/raw
+          if git diff --cached --quiet; then
+            echo "no changes today"
+          else
+            git commit -m "snapshot $(date -u +%F)"
+            git push
+          fi

@@ -1,0 +1,331 @@
+{
+  "data": {
+    "creatives": 726553,
+    "channels": 13412675,
+    "bots": 386815,
+    "advertisers": 114925,
+    "impressions": 627986095,
+    "paymentBreakdown": {
+      "UNKNOWN": 81,
+      "TON": 589548,
+      "EUR_ADS_CABINET": 136941
+    },
+    "today": {
+      "creatives": 2332,
+      "impressions": 10498590,
+      "advertisers": 295,
+      "channels": 8641,
+      "bots": 607,
+      "vsYesterdayPct": -16
+    },
+    "topNiches": [
+      {
+        "niche": "trading",
+        "count": 145233
+      },
+      {
+        "niche": "gambling",
+        "count": 68279
+      },
+      {
+        "niche": "crypto",
+        "count": 52542
+      },
+      {
+        "niche": "retail",
+        "count": 47893
+      },
+      {
+        "niche": "betting",
+        "count": 39682
+      },
+      {
+        "niche": "education",
+        "count": 32941
+      },
+      {
+        "niche": "vpn",
+        "count": 29135
+      },
+      {
+        "niche": "bots",
+        "count": 28531
+      },
+      {
+        "niche": "casino",
+        "count": 22383
+      },
+      {
+        "niche": "auto",
+        "count": 18141
+      },
+      {
+        "niche": "gaming",
+        "count": 15168
+      },
+      {
+        "niche": "fashion",
+        "count": 14863
+      },
+      {
+        "niche": "news",
+        "count": 14427
+      },
+      {
+        "niche": "health",
+        "count": 13418
+      },
+      {
+        "niche": "tech",
+        "count": 13132
+      },
+      {
+        "niche": "finance",
+        "count": 12693
+      },
+      {
+        "niche": "real-estate",
+        "count": 10311
+      },
+      {
+        "niche": "jobs",
+        "count": 8287
+      },
+      {
+        "niche": "travel",
+        "count": 6871
+      },
+      {
+        "niche": "marketing",
+        "count": 4997
+      }
+    ],
+    "topGeos": [
+      {
+        "code": "RU",
+        "count": 195688
+      },
+      {
+        "code": "IN",
+        "count": 56897
+      },
+      {
+        "code": "IR",
+        "count": 51565
+      },
+      {
+        "code": "AE",
+        "count": 46481
+      },
+      {
+        "code": "MM",
+        "count": 27036
+      },
+      {
+        "code": "ID",
+        "count": 21069
+      },
+      {
+        "code": "TR",
+        "count": 15005
+      },
+      {
+        "code": "CN",
+        "count": 13711
+      },
+      {
+        "code": "UZ",
+        "count": 12594
+      },
+      {
+        "code": "BD",
+        "count": 12274
+      },
+      {
+        "code": "ES",
+        "count": 10573
+      },
+      {
+        "code": "DE",
+        "count": 10455
+      },
+      {
+        "code": "FR",
+        "count": 9136
+      },
+      {
+        "code": "BR",
+        "count": 8993
+      },
+      {
+        "code": "VN",
+        "count": 6776
+      },
+      {
+        "code": "TH",
+        "count": 6137
+      },
+      {
+        "code": "UA",
+        "count": 5932
+      },
+      {
+        "code": "IT",
+        "count": 4688
+      },
+      {
+        "code": "KH",
+        "count": 4346
+      },
+      {
+        "code": "KR",
+        "count": 3500
+      },
+      {
+        "code": "PL",
+        "count": 2300
+      },
+      {
+        "code": "NL",
+        "count": 2197
+      },
+      {
+        "code": "KZ",
+        "count": 2085
+      },
+      {
+        "code": "RO",
+        "count": 1923
+      },
+      {
+        "code": "US",
+        "count": 1146
+      },
+      {
+        "code": "BY",
+        "count": 1106
+      },
+      {
+        "code": "AZ",
+        "count": 941
+      },
+      {
+        "code": "GB",
+        "count": 861
+      },
+      {
+        "code": "IL",
+        "count": 698
+      },
+      {
+        "code": "AU",
+        "count": 686
+      },
+      {
+        "code": "GE",
+        "count": 586
+      },
+      {
+        "code": "MY",
+        "count": 572
+      },
+      {
+        "code": "AM",
+        "count": 454
+      },
+      {
+        "code": "CH",
+        "count": 403
+      },
+      {
+        "code": "MA",
+        "count": 316
+      },
+      {
+        "code": "MD",
+        "count": 267
+      },
+      {
+        "code": "SA",
+        "count": 259
+      },
+      {
+        "code": "JP",
+        "count": 210
+      },
+      {
+        "code": "KG",
+        "count": 198
+      },
+      {
+        "code": "MX",
+        "count": 181
+      },
+      {
+        "code": "PK",
+        "count": 169
+      },
+      {
+        "code": "TW",
+        "count": 167
+      },
+      {
+        "code": "CZ",
+        "count": 147
+      },
+      {
+        "code": "AR",
+        "count": 147
+      },
+      {
+        "code": "DZ",
+        "count": 145
+      },
+      {
+        "code": "BE",
+        "count": 132
+      },
+      {
+        "code": "ET",
+        "count": 129
+      },
+      {
+        "code": "PT",
+        "count": 127
+      },
+      {
+        "code": "NG",
+        "count": 124
+      },
+      {
+        "code": "EG",
+        "count": 122
+      }
+    ],
+    "topTypes": [
+      {
+        "type": "banner",
+        "count": 385692
+      },
+      {
+        "type": "channelPic",
+        "count": 69782
+      },
+      {
+        "type": "text",
+        "count": 271096
+      },
+      {
+        "type": "invoice",
+        "count": 0
+      },
+      {
+        "type": "giveaway",
+        "count": 0
+      }
+    ],
+    "ts": "2026-10-24T12:29:36.320Z",
+    "lastCreativeAt": "2026-10-24T12:29:33.556Z",
+    "plan": "ANON"
+  }
+}
