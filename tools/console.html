@@ -1,0 +1,79 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Ops console</title>
+<style>
+  body{font:13px/1.5 system-ui,sans-serif;max-width:760px;margin:24px auto;padding:0 16px}
+  #status{color:#888;font-size:11px;float:right}
+  .row{display:grid;grid-template-columns:90px 1fr 110px;gap:8px;font-size:11px;padding:2px 0;align-items:center}
+  .bar{height:8px;background:#93c5fd;border-radius:2px}
+  input{font:inherit;font-size:11px;width:100%;padding:2px 4px}
+  table{width:100%;border-collapse:collapse;font-size:11px}
+  td,th{padding:3px 5px;text-align:left}
+  button{font:inherit;font-size:11px;padding:3px 8px}
+</style>
+
+<h3>Ops console <span id="status">starting…</span></h3>
+
+<h4>Geo reachability — high gap = broken attribution</h4>
+<div id="geo"></div>
+
+<h4>Niche ad volume — VPN highlighted</h4>
+<div id="niche"></div>
+
+<h4>Buy list &amp; ledger
+  <button onclick="add()">+ row</button>
+  <button onclick="csv()">export csv</button>
+  <button onclick="snap()">snapshot json</button>
+</h4>
+<table id="tbl"></table>
+<div id="totals" style="font-size:11px;color:#888"></div>
+
+<script>
+const API='https://tgadsspy.com/api/v1', K='vpnops.v1';
+let S={geos:[],niches:[],rows:[]};
+try{const s=JSON.parse(localStorage[K]);if(s&&s.rows)S.rows=s.rows}catch(e){}
+const save=()=>localStorage[K]=JSON.stringify({rows:S.rows});
+const n=v=>v.toLocaleString('en-GB');
+const bar=(v,m)=>`<div class="bar" style="width:${Math.max(2,v/m*100)}%"></div>`;
+const SEED={geos:[["RU",195674,195564],["IR",51560,51548],["TR",15004,14865],["UZ",12591,11245],["AE",46472,1456]],
+            niches:[["trading",145221],["gambling",68274],["crypto",52538],["vpn",29132],["finance",12689]]};
+
+function geo(){
+  const r=S.geos.slice().sort((a,b)=>b[1]-a[1]).slice(0,14), m=r[0]?.[1]||1;
+  geo_el.innerHTML=r.map(([c,i,k])=>{const g=1-k/i,col=g>.5?'#dc2626':g>.25?'#b45309':'#16a34a';
+    return `<div class="row"><b>${c}</b>${bar(i,m)}<span style="color:${col};text-align:right">${n(i)} gap ${(g*100)|0}%</span></div>`}).join('');
+}
+function niche(){
+  const r=S.niches.slice().sort((a,b)=>b[1]-a[1]).slice(0,14), m=r[0]?.[1]||1;
+  niche_el.innerHTML=r.map(([x,v])=>{const p=x==='vpn';
+    return `<div class="row"><span style="${p?'font-weight:600;color:#16a34a':'color:#888'}">${x}</span>${bar(v,m)}<span style="text-align:right;color:#888">${n(v)}</span></div>`}).join('');
+}
+const F=['channel','subs','avgViews','price','optIns','sales'];
+function tbl(){
+  let h='<tr>'+F.map(f=>`<th>${f}</th>`).join('')+'<th>€/1k</th><th>€/optin</th></tr>';
+  h+=S.rows.map((r,i)=>{
+    const v=+r.avgViews||0,p=+r.price||0,o=+r.optIns||0,cpo=o?p/o:0;
+    const col=!o?'#888':cpo<=3?'#16a34a':cpo<=7?'#b45309':'#dc2626';
+    return '<tr>'+F.map(f=>`<td><input data-i="${i}" data-f="${f}" value="${r[f]||''}"></td>`).join('')
+      +`<td>${v?(p/v*1000).toFixed(2):'—'}</td><td style="color:${col}">${cpo?cpo.toFixed(2):'—'}</td></tr>`;
+  }).join('');
+  tbl_el.innerHTML=h;
+  const sp=S.rows.reduce((a,r)=>a+(+r.price||0),0),op=S.rows.reduce((a,r)=>a+(+r.optIns||0),0);
+  totals.textContent=S.rows.length?`${S.rows.length} chans · €${sp.toFixed(2)} · ${op} opt-ins · €${op?(sp/op).toFixed(2):'—'}/optin`:'no rows';
+}
+document.addEventListener('input',e=>{if(e.target.dataset.i===undefined)return;
+  S.rows[+e.target.dataset.i][e.target.dataset.f]=e.target.value;save();tbl()});
+function add(){S.rows.push({channel:''});save();tbl()}
+function dl(t,f){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t]));a.download=f;a.click()}
+function csv(){const H=F.concat(['cost_per_1k','cost_per_optin']);
+  dl([H.join(',')].concat(S.rows.map(r=>{const v=+r.avgViews||0,p=+r.price||0,o=+r.optIns||0;
+    return F.map(f=>(r[f]||'').toString().replace(/,/g,' ')).concat([v?(p/v*1000).toFixed(2):'',o?(p/o).toFixed(2):'']).join(',')})).join('\n'),'results.csv')}
+async function snap(){const[a,b,c]=await Promise.all(['stats','geos','niches'].map(p=>fetch(`${API}/${p}`).then(r=>r.json())));
+  dl(JSON.stringify({takenAt:new Date().toISOString(),stats:a,geos:b,niches:c},null,2),'snapshot-'+new Date().toISOString().slice(0,10)+'.json')}
+
+(async()=>{try{const[s,g]=await Promise.all([fetch(API+'/stats').then(r=>r.json()),fetch(API+'/geos').then(r=>r.json())]);
+  S.niches=s.data.topNiches.map(x=>[x.niche,x.count]);S.geos=g.data.map(x=>[x.code,x.intentCount,x.confidentCount]);
+  status.textContent='live · '+new Date().toLocaleTimeString('en-GB')}
+ catch(e){S.geos=SEED.geos;S.niches=SEED.niches;status.textContent='offline — seeded'}
+ geo();niche();tbl()})();
+</script>
