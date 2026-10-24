@@ -1,0 +1,40 @@
+cat > .gitignore <<'EOF'
+# ---- secrets ---------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+secrets.json
+
+# ---- python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ---- editors ---------------------------------------------------------------
+# NOTE: .vscode/ is NOT ignored wholesale — .vscode/mcp.json is committed.
+.vscode/*.log
+.idea/
+*.swp
+*~
+
+# ---- macOS ----------------------------------------------------------------
+.DS_Store
+._*
+
+# ---- logs / temp -----------------------------------------------------------
+*.log
+tmp/
+.cache/
+
+# ---- keep these tracked ----------------------------------------------------
+# data/raw/       daily snapshots — committed by the cron, do not ignore
+# data/processed/ the ledger — definitely do not ignore
+# reports/        weekly summaries
+# funnel/         page and email copy
+# docs/           handover, decisions, verification
+EOF
