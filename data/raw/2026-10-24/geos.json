@@ -2,18 +2,18 @@
   "data": [
     {
       "code": "RU",
-      "intentCount": 195688,
-      "confidentCount": 195578
+      "intentCount": 195694,
+      "confidentCount": 195584
     },
     {
       "code": "IN",
-      "intentCount": 56897,
-      "confidentCount": 56717
+      "intentCount": 56899,
+      "confidentCount": 56719
     },
     {
       "code": "IR",
-      "intentCount": 51565,
-      "confidentCount": 51553
+      "intentCount": 51570,
+      "confidentCount": 51558
     },
     {
       "code": "MM",
@@ -22,13 +22,13 @@
     },
     {
       "code": "ID",
-      "intentCount": 21069,
-      "confidentCount": 21050
+      "intentCount": 21071,
+      "confidentCount": 21052
     },
     {
       "code": "TR",
-      "intentCount": 15005,
-      "confidentCount": 14866
+      "intentCount": 15006,
+      "confidentCount": 14867
     },
     {
       "code": "CN",
@@ -42,8 +42,8 @@
     },
     {
       "code": "UZ",
-      "intentCount": 12594,
-      "confidentCount": 11248
+      "intentCount": 12596,
+      "confidentCount": 11250
     },
     {
       "code": "DE",
@@ -62,8 +62,8 @@
     },
     {
       "code": "UA",
-      "intentCount": 5932,
-      "confidentCount": 5919
+      "intentCount": 5933,
+      "confidentCount": 5920
     },
     {
       "code": "IT",
@@ -77,13 +77,13 @@
     },
     {
       "code": "BR",
-      "intentCount": 8993,
+      "intentCount": 8994,
       "confidentCount": 4128
     },
     {
       "code": "FR",
-      "intentCount": 9136,
-      "confidentCount": 3714
+      "intentCount": 9137,
+      "confidentCount": 3715
     },
     {
       "code": "KR",
@@ -92,8 +92,8 @@
     },
     {
       "code": "ES",
-      "intentCount": 10573,
-      "confidentCount": 2548
+      "intentCount": 10577,
+      "confidentCount": 2551
     },
     {
       "code": "PL",
@@ -112,12 +112,12 @@
     },
     {
       "code": "RO",
-      "intentCount": 1923,
-      "confidentCount": 1913
+      "intentCount": 1924,
+      "confidentCount": 1914
     },
     {
       "code": "AE",
-      "intentCount": 46481,
+      "intentCount": 46483,
       "confidentCount": 1456
     },
     {
@@ -493,7 +493,7 @@
   ],
   "meta": {
     "total": 98,
-    "plan": "ANON",
+    "plan": "FREE",
     "metric": "advertiser-intent",
     "fields": {
       "confidentCount": "creatives whose target country is confirmed by the creative itself (landing ccTLD, script, flag, unambiguous language)",

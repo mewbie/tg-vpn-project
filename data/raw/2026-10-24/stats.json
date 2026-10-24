@@ -1,51 +1,51 @@
 {
   "data": {
-    "creatives": 726553,
-    "channels": 13412675,
-    "bots": 386815,
-    "advertisers": 114925,
-    "impressions": 627986095,
+    "creatives": 726588,
+    "channels": 13418963,
+    "bots": 386816,
+    "advertisers": 114928,
+    "impressions": 628095681,
     "paymentBreakdown": {
       "UNKNOWN": 81,
-      "TON": 589548,
-      "EUR_ADS_CABINET": 136941
+      "TON": 589581,
+      "EUR_ADS_CABINET": 136945
     },
     "today": {
-      "creatives": 2332,
-      "impressions": 10498590,
-      "advertisers": 295,
-      "channels": 8641,
-      "bots": 607,
-      "vsYesterdayPct": -16
+      "creatives": 2336,
+      "impressions": 10523881,
+      "advertisers": 291,
+      "channels": 8695,
+      "bots": 602,
+      "vsYesterdayPct": -15
     },
     "topNiches": [
       {
         "niche": "trading",
-        "count": 145233
+        "count": 145237
       },
       {
         "niche": "gambling",
-        "count": 68279
+        "count": 68288
       },
       {
         "niche": "crypto",
-        "count": 52542
+        "count": 52548
       },
       {
         "niche": "retail",
-        "count": 47893
+        "count": 47895
       },
       {
         "niche": "betting",
-        "count": 39682
+        "count": 39684
       },
       {
         "niche": "education",
-        "count": 32941
+        "count": 32947
       },
       {
         "niche": "vpn",
-        "count": 29135
+        "count": 29136
       },
       {
         "niche": "bots",
@@ -61,15 +61,15 @@
       },
       {
         "niche": "gaming",
-        "count": 15168
+        "count": 15169
       },
       {
         "niche": "fashion",
-        "count": 14863
+        "count": 14865
       },
       {
         "niche": "news",
-        "count": 14427
+        "count": 14428
       },
       {
         "niche": "health",
@@ -89,11 +89,11 @@
       },
       {
         "niche": "jobs",
-        "count": 8287
+        "count": 8288
       },
       {
         "niche": "travel",
-        "count": 6871
+        "count": 6872
       },
       {
         "niche": "marketing",
@@ -103,19 +103,19 @@
     "topGeos": [
       {
         "code": "RU",
-        "count": 195688
+        "count": 195696
       },
       {
         "code": "IN",
-        "count": 56897
+        "count": 56899
       },
       {
         "code": "IR",
-        "count": 51565
+        "count": 51570
       },
       {
         "code": "AE",
-        "count": 46481
+        "count": 46483
       },
       {
         "code": "MM",
@@ -123,11 +123,11 @@
       },
       {
         "code": "ID",
-        "count": 21069
+        "count": 21071
       },
       {
         "code": "TR",
-        "count": 15005
+        "count": 15006
       },
       {
         "code": "CN",
@@ -135,7 +135,7 @@
       },
       {
         "code": "UZ",
-        "count": 12594
+        "count": 12597
       },
       {
         "code": "BD",
@@ -143,7 +143,7 @@
       },
       {
         "code": "ES",
-        "count": 10573
+        "count": 10577
       },
       {
         "code": "DE",
@@ -151,11 +151,11 @@
       },
       {
         "code": "FR",
-        "count": 9136
+        "count": 9137
       },
       {
         "code": "BR",
-        "count": 8993
+        "count": 8994
       },
       {
         "code": "VN",
@@ -167,7 +167,7 @@
       },
       {
         "code": "UA",
-        "count": 5932
+        "count": 5933
       },
       {
         "code": "IT",
@@ -195,7 +195,7 @@
       },
       {
         "code": "RO",
-        "count": 1923
+        "count": 1924
       },
       {
         "code": "US",
@@ -305,15 +305,15 @@
     "topTypes": [
       {
         "type": "banner",
-        "count": 385692
+        "count": 385714
       },
       {
         "type": "channelPic",
-        "count": 69782
+        "count": 69784
       },
       {
         "type": "text",
-        "count": 271096
+        "count": 271109
       },
       {
         "type": "invoice",
@@ -324,8 +324,8 @@
         "count": 0
       }
     ],
-    "ts": "2026-10-24T12:29:36.320Z",
-    "lastCreativeAt": "2026-10-24T12:29:33.556Z",
-    "plan": "ANON"
+    "ts": "2026-10-24T12:49:26.032Z",
+    "lastCreativeAt": "2026-10-24T12:49:07.631Z",
+    "plan": "FREE"
   }
 }
