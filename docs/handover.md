@@ -96,8 +96,11 @@ Kill gates:
   date,channel,subs,views,price_paid,opt_ins,sales,revenue,notes
 
 ## 11. Current state
-Done: repo, plumbing, cron verified, identity, MCP, strategy, docs.
-Not done: API key, affiliate approval, buy list, bridge page, DM outreach, launch.
+Done: repo, plumbing, cron verified, identity, MCP, strategy, docs, live bridge
+page (voluble-sorbet-a8e5ca.netlify.app on Netlify, auto-deploys from funnel/).
+Applied: PureVPN, Surfshark, NordVPN affiliate programs — pending approval.
+Not done: API key, buy list vetting, page rebuild (still an article, no CTA/form),
+DM outreach, launch.
 
 ## 12. Next actions (in order)
 1. Get TGADSSPY_KEY, add as GitHub Secret.

@@ -45,3 +45,8 @@ versioned file in the repo rather than a config in a web UI.
 The random subdomain (voluble-sorbet-a8e5ca) is already on three applications.
 Renaming would change the URL and risk breaking references. Revisit once there is
 a custom domain.
+
+## 2026-10-24 — Page rebuild pending
+funnel/index.html is currently an article with no conversion mechanics. It was
+built from docs/brief.md rather than funnel/copy.md. Rebuild required: credential
+intro, routing question with 4 JS buttons, 4 variants, email capture, CTA.
