@@ -27,7 +27,7 @@ jobs:
       - name: Fetch snapshots
         env:
           TGADSSPY_KEY: ${{ secrets.TGADSSPY_KEY }}
-        run: python scripts/fetch.py
+        run: python scripts/fetch_channels.py
 
       # 4. save the result back to the repo
       - name: Commit
